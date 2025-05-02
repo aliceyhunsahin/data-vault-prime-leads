@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TrustBadge from "@/components/TrustBadge";
 import DataCategory from "@/components/DataCategory";
@@ -99,9 +99,12 @@ const Index = () => {
               See the data quality firsthand with our free sample. Download verified contacts from one example company.
             </p>
             <div className="flex justify-center">
-              <Button className="flex items-center gap-2">
-                <Download className="h-4 w-4" />
-                Download Sample
+              <Button 
+                className="flex items-center gap-2"
+                onClick={() => window.location.href = "mailto:info@deepoasisai.com"}
+              >
+                <Mail className="h-4 w-4" />
+                Contact Us: info@deepoasisai.com
               </Button>
             </div>
           </div>
