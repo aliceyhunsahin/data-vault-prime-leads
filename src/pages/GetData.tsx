@@ -57,7 +57,7 @@ const GetData = () => {
     },
     {
       question: "Can I get a custom dataset?",
-      answer: "Yes! Contact us at admin@yourdomain.com for custom data requirements and quotes.",
+      answer: "Yes! Contact us at info@deepoasisaI.com for custom data requirements and quotes.",
     },
   ];
 
@@ -154,7 +154,7 @@ const GetData = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Send confirmation</h3>
                     <p className="text-muted-foreground">
-                      Email a screenshot of your transaction to <strong>admin@yourdomain.com</strong> with the dataset name in the subject line.
+                      Email a screenshot of your transaction to <strong>info@deepoasisaI.com</strong> with the dataset name in the subject line.
                     </p>
                   </div>
                 </div>

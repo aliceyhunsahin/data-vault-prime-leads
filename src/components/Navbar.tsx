@@ -23,7 +23,7 @@ const Navbar = () => {
 
           {/* Logo (centered) */}
           <Link to="/" className="flex items-center absolute left-1/2 transform -translate-x-1/2 md:static md:left-auto md:transform-none">
-            <span className="text-xl font-bold text-primary">DataVault Prime</span>
+            <span className="text-xl font-bold text-primary">DeepOasisAI</span>
           </Link>
 
           {/* Desktop Navigation (right) */}

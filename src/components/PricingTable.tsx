@@ -1,5 +1,6 @@
 
-import { Euro } from "lucide-react";
+import { Euro, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 type PricingItemProps = {
   category: string;
@@ -43,6 +44,17 @@ const PricingItem = ({ category, price, description }: PricingItemProps) => {
             <span>CSV and Excel formats</span>
           </li>
         </ul>
+        
+        <div className="mt-4 text-center">
+          <Button 
+            variant="primary" 
+            className="w-full" 
+            onClick={() => window.location.href = "mailto:info@deepoasisaI.com?subject=Inquiry about " + category}
+          >
+            <Mail size={16} />
+            Contact Us
+          </Button>
+        </div>
       </div>
     </div>
   );
