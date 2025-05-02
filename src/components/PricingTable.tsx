@@ -8,6 +8,9 @@ type PricingItemProps = {
 };
 
 const PricingItem = ({ category, price, description }: PricingItemProps) => {
+  // Calculate original price (price is now the discounted value)
+  const originalPrice = Math.round(price / 0.37);
+  
   return (
     <div className="bg-white rounded-lg border border-gray-200 overflow-hidden card-hover">
       <div className="p-6">
@@ -15,9 +18,15 @@ const PricingItem = ({ category, price, description }: PricingItemProps) => {
         <p className="text-sm text-muted-foreground mb-4">{description}</p>
         <div className="flex items-center gap-2 mb-2">
           <Euro className="h-5 w-5 text-primary" />
-          <span className="text-2xl font-bold">{price.toLocaleString()} USDT</span>
+          <div className="flex flex-col">
+            <span className="text-2xl font-bold">{price.toLocaleString()} USDT</span>
+            <span className="text-sm text-muted-foreground line-through">{originalPrice.toLocaleString()} USDT</span>
+          </div>
         </div>
-        <p className="text-xs text-muted-foreground">One-time purchase</p>
+        <div className="flex items-center gap-2">
+          <span className="text-xs bg-green-100 text-green-800 font-semibold px-2 py-1 rounded">63% OFF</span>
+          <p className="text-xs text-muted-foreground">One-time purchase</p>
+        </div>
       </div>
       <div className="bg-secondary p-4">
         <ul className="text-sm space-y-2">
