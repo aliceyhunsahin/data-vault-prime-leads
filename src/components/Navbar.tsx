@@ -31,9 +31,6 @@ const Navbar = () => {
             <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Home
             </Link>
-            <Link to="/get-data" className="text-foreground hover:text-primary transition-colors">
-              Get The Data
-            </Link>
             <Button asChild>
               <Link to="/get-data">
                 Explore Datasets
@@ -58,13 +55,6 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </Link>
-            <Link 
-              to="/get-data" 
-              className="text-foreground hover:text-primary py-2 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Get The Data
             </Link>
             <Button asChild className="w-full">
               <Link to="/get-data" onClick={() => setIsMenuOpen(false)}>

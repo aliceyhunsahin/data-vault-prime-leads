@@ -9,7 +9,7 @@ type PricingItemProps = {
 
 const PricingItem = ({ category, price, description }: PricingItemProps) => {
   // Calculate original price (price is now the discounted value)
-  const originalPrice = Math.round(price / 0.37);
+  const originalPrice = Math.round(price / 0.25);
   
   return (
     <div className="bg-white rounded-lg border border-gray-200 overflow-hidden card-hover">
@@ -24,7 +24,7 @@ const PricingItem = ({ category, price, description }: PricingItemProps) => {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs bg-green-100 text-green-800 font-semibold px-2 py-1 rounded">63% OFF</span>
+          <span className="text-xs bg-green-100 text-green-800 font-semibold px-2 py-1 rounded">75% OFF</span>
           <p className="text-xs text-muted-foreground">One-time purchase</p>
         </div>
       </div>

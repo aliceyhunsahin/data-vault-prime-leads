@@ -9,31 +9,31 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Shield } from 'lucide-react';
 
 const GetData = () => {
-  // Apply 63% discount to all prices (original * 0.37)
+  // Apply 75% discount to all prices (original * 0.25)
   const pricingData = [
     {
       category: "European VC Firms",
-      price: 555, // Original: 1500 * 0.37 = 555
+      price: 375, // Original: 1500 * 0.25 = 375
       description: "Decision makers at top European VCs",
     },
     {
       category: "European Angel Investors",
-      price: 185, // Original: 500 * 0.37 = 185
+      price: 125, // Original: 500 * 0.25 = 125
       description: "Active angel investors throughout Europe",
     },
     {
       category: "European Travel Executives",
-      price: 111, // Original: 300 * 0.37 = 111
+      price: 75, // Original: 300 * 0.25 = 75
       description: "C-level and senior leadership in travel",
     },
     {
       category: "Family Offices",
-      price: 444, // Original: 1200 * 0.37 = 444
+      price: 300, // Original: 1200 * 0.25 = 300
       description: "Family offices across USA, EU, and India",
     },
     {
       category: "Top Travel Acquirers",
-      price: 111, // Original: 300 * 0.37 = 111
+      price: 75, // Original: 300 * 0.25 = 75
       description: "Strategic buyers in the travel sector",
     },
   ];
