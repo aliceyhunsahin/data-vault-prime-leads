@@ -91,10 +91,12 @@ const Index = () => {
             <p className="section-subtitle">
               See the data quality firsthand with our free sample. Download verified contacts from one example company.
             </p>
-            <Button className="flex items-center gap-2">
-              <Download className="h-4 w-4" />
-              Download Sample
-            </Button>
+            <div className="flex justify-center">
+              <Button className="flex items-center gap-2">
+                <Download className="h-4 w-4" />
+                Download Sample
+              </Button>
+            </div>
           </div>
         </div>
       </section>
