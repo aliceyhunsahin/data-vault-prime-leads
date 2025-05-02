@@ -7,6 +7,13 @@ import DataCategory from "@/components/DataCategory";
 import Testimonial from "@/components/Testimonial";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 const Index = () => {
   return (
@@ -111,17 +118,71 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Testimonial 
-              quote="I closed a deal with one of the investors within 2 weeks." 
-              author="Alex Thompson" 
-              company="CEO, FinTech Startup"
-            />
-            <Testimonial 
-              quote="Best curated VC data I've seen online." 
-              author="Sarah Mitchell" 
-              company="Founder, TravelTech"
-            />
+          <div className="max-w-5xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="I closed a deal with one of the investors within 2 weeks." 
+                    role="CEO" 
+                    company="FinTech Startup"
+                  />
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="Best curated VC data I've seen online." 
+                    role="Founder" 
+                    company="TravelTech"
+                  />
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="The quality of contacts is outstanding. Much better than what I found on LinkedIn." 
+                    role="Business Development" 
+                    company="SaaS Platform"
+                  />
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="We secured funding within a month using these contacts." 
+                    role="Co-founder" 
+                    company="AI Startup"
+                  />
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="The travel industry contacts helped us close three major partnerships." 
+                    role="CMO" 
+                    company="Travel Agency"
+                  />
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="Worth every penny. Our outreach success rate tripled." 
+                    role="Sales Director" 
+                    company="MarTech Company"
+                  />
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="Connecting with family offices was a game-changer for our fund." 
+                    role="Investment Manager" 
+                    company="Private Equity"
+                  />
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2">
+                  <Testimonial 
+                    quote="These contacts helped us identify the perfect acquisition target." 
+                    role="Strategy Officer" 
+                    company="Corporate Travel"
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <div className="flex justify-center mt-4">
+                <CarouselPrevious className="static transform-none mx-2" />
+                <CarouselNext className="static transform-none mx-2" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
