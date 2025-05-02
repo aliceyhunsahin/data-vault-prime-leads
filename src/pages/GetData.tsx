@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import PricingTable from '@/components/PricingTable';
+import { PricingTable } from '@/components/PricingTable';
 import FAQ from '@/components/FAQ';
 import TrustBadge from '@/components/TrustBadge';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
