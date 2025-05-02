@@ -14,26 +14,31 @@ const GetData = () => {
       category: "European VC Firms",
       price: 375, // Original: 1500 * 0.25 = 375
       description: "Decision makers at top European VCs",
+      contactCount: 4500,
     },
     {
       category: "European Angel Investors",
       price: 125, // Original: 500 * 0.25 = 125
       description: "Active angel investors throughout Europe",
+      contactCount: 2000,
     },
     {
       category: "European Travel Executives",
       price: 75, // Original: 300 * 0.25 = 75
       description: "C-level and senior leadership in travel",
+      contactCount: 1500,
     },
     {
       category: "Family Offices",
       price: 300, // Original: 1200 * 0.25 = 300
       description: "Family offices across USA, EU, and India",
+      contactCount: 3500,
     },
     {
       category: "Top Travel Acquirers",
       price: 75, // Original: 300 * 0.25 = 75
       description: "Strategic buyers in the travel sector",
+      contactCount: 300,
     },
   ];
 
