@@ -23,7 +23,13 @@ const Navbar = () => {
 
           {/* Logo (centered) */}
           <Link to="/" className="flex items-center absolute left-1/2 transform -translate-x-1/2 md:static md:left-auto md:transform-none">
-            <span className="text-xl font-bold text-primary">DeepOasisAI</span>
+            <div className="flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/de380eab-659f-4c30-bcf7-757f971d689d.png" 
+                alt="DeepOasisAI Logo" 
+                className="h-10 md:h-12" 
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation (right) */}

@@ -4,50 +4,68 @@ import { Button } from "@/components/ui/button";
 
 type PricingItemProps = {
   category: string;
+  records: string;
   price: number;
-  description: string;
+  features: string[];
 };
 
-const PricingItem = ({ category, price, description }: PricingItemProps) => {
-  // Calculate original price (price is now the discounted value)
-  const originalPrice = Math.round(price / 0.25);
-  
+export const PricingTable = () => {
+  const pricingItems: PricingItemProps[] = [
+    {
+      category: "Startup Package",
+      records: "5,000 records",
+      price: 199,
+      features: ["Email addresses", "Company names", "Phone numbers", "Industry filters"],
+    },
+    {
+      category: "Business Package",
+      records: "25,000 records",
+      price: 499,
+      features: ["Email addresses", "Company names", "Phone numbers", "Industry filters", "Role-based targeting"],
+    },
+    {
+      category: "Enterprise Package",
+      records: "100,000+ records",
+      price: 1999,
+      features: ["Email addresses", "Company names", "Phone numbers", "Industry filters", "Role-based targeting", "Custom data fields", "Integration support"],
+    },
+  ];
+
   return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden card-hover">
-      <div className="p-6 text-center">
-        <h3 className="text-xl font-semibold mb-2">{category}</h3>
-        <p className="text-sm text-muted-foreground mb-4">{description}</p>
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <Euro className="h-5 w-5 text-primary" />
-          <div className="flex flex-col">
-            <span className="text-2xl font-bold">{price.toLocaleString()} USDT</span>
-            <span className="text-sm text-muted-foreground line-through">{originalPrice.toLocaleString()} USDT</span>
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {pricingItems.map((item) => (
+        <PricingItem key={item.category} {...item} />
+      ))}
+    </div>
+  );
+};
+
+const PricingItem = ({ category, records, price, features }: PricingItemProps) => {
+  return (
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+      <div className="px-6 py-8">
+        <h3 className="text-xl font-semibold text-center mb-1">{category}</h3>
+        <p className="text-muted-foreground text-center mb-4">{records}</p>
+        <div className="flex items-center justify-center mb-6">
+          <Euro className="text-primary" />
+          <span className="text-3xl font-bold text-primary">{price}</span>
         </div>
-        <div className="flex items-center justify-center gap-2">
-          <span className="text-xs bg-green-100 text-green-800 font-semibold px-2 py-1 rounded">75% OFF</span>
-          <p className="text-xs text-muted-foreground">One-time purchase</p>
-        </div>
-      </div>
-      <div className="bg-secondary p-4">
-        <ul className="text-sm space-y-2 text-center">
-          <li className="flex items-start gap-2 justify-center">
-            <span className="text-green-500">✓</span>
-            <span>Verified emails & LinkedIn profiles</span>
-          </li>
-          <li className="flex items-start gap-2 justify-center">
-            <span className="text-green-500">✓</span>
-            <span>Secure delivery within 24 hours</span>
-          </li>
-          <li className="flex items-start gap-2 justify-center">
-            <span className="text-green-500">✓</span>
+        <ul className="space-y-3 mb-6">
+          {features.map((feature) => (
+            <li key={feature} className="flex items-center gap-2 text-center justify-center">
+              <span>✓</span>
+              <span>{feature}</span>
+            </li>
+          ))}
+          <li className="flex items-center gap-2 text-center justify-center">
+            <span>✓</span>
             <span>CSV and Excel formats</span>
           </li>
         </ul>
         
         <div className="mt-4 text-center">
           <Button 
-            variant="primary" 
+            variant="default" 
             className="w-full" 
             onClick={() => window.location.href = "mailto:info@deepoasisaI.com?subject=Inquiry about " + category}
           >
@@ -59,31 +77,3 @@ const PricingItem = ({ category, price, description }: PricingItemProps) => {
     </div>
   );
 };
-
-type PricingTableProps = {
-  items: Array<{
-    category: string;
-    price: number;
-    description: string;
-  }>;
-  className?: string;
-};
-
-const PricingTable = ({ items, className = '' }: PricingTableProps) => {
-  return (
-    <div className={className}>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item, index) => (
-          <PricingItem
-            key={index}
-            category={item.category}
-            price={item.price}
-            description={item.description}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default PricingTable;

@@ -7,7 +7,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">DeepOasisAI</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/lovable-uploads/de380eab-659f-4c30-bcf7-757f971d689d.png" 
+                alt="DeepOasisAI Logo" 
+                className="h-10 bg-white rounded-full p-1" 
+              />
+              <h3 className="text-xl font-bold">DeepOasisAI</h3>
+            </div>
             <p className="text-primary-foreground/80 mb-4">
               Premium B2B contact data, delivered securely.
             </p>
