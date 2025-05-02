@@ -1,0 +1,73 @@
+
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          <Link to="/" className="flex items-center">
+            <span className="text-xl font-bold text-primary">DataVault Prime</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-6">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+              Home
+            </Link>
+            <Link to="/get-data" className="text-foreground hover:text-primary transition-colors">
+              Get The Data
+            </Link>
+            <Button asChild>
+              <Link to="/get-data">
+                Explore Datasets
+              </Link>
+            </Button>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-md hover:bg-muted"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-border animate-fade-in">
+          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <Link 
+              to="/" 
+              className="text-foreground hover:text-primary py-2 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/get-data" 
+              className="text-foreground hover:text-primary py-2 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Get The Data
+            </Link>
+            <Button asChild className="w-full">
+              <Link to="/get-data" onClick={() => setIsMenuOpen(false)}>
+                Explore Datasets
+              </Link>
+            </Button>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;
