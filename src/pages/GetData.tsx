@@ -9,7 +9,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Shield } from 'lucide-react';
 
 const GetData = () => {
-  // Apply 75% discount to all prices (original * 0.25)
+  // Apply 75% discount to all prices (original * 0.25 = 375)
   const pricingData = [
     {
       category: "European VC Firms",

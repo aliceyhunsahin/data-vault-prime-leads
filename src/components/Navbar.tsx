@@ -25,10 +25,11 @@ const Navbar = () => {
           <Link to="/" className="flex items-center absolute left-1/2 transform -translate-x-1/2 md:static md:left-auto md:transform-none">
             <div className="flex items-center gap-2">
               <img 
-                src="/lovable-uploads/de380eab-659f-4c30-bcf7-757f971d689d.png" 
+                src="/lovable-uploads/5c1f80f6-6452-423a-847f-168344e788d1.png" 
                 alt="DeepOasisAI Logo" 
                 className="h-10 md:h-12" 
               />
+              <span className="font-bold text-lg md:text-xl">DeepOasisAI</span>
             </div>
           </Link>
 

@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/lovable-uploads/de380eab-659f-4c30-bcf7-757f971d689d.png" 
+                src="/lovable-uploads/5c1f80f6-6452-423a-847f-168344e788d1.png" 
                 alt="DeepOasisAI Logo" 
                 className="h-10 bg-white rounded-full p-1" 
               />
