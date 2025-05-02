@@ -11,11 +11,22 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center">
+          {/* Mobile Menu Button (left) */}
+          <div className="md:hidden">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-md hover:bg-muted"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Logo (centered) */}
+          <Link to="/" className="flex items-center absolute left-1/2 transform -translate-x-1/2 md:static md:left-auto md:transform-none">
             <span className="text-xl font-bold text-primary">DataVault Prime</span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation (right) */}
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Home
@@ -29,14 +40,11 @@ const Navbar = () => {
               </Link>
             </Button>
           </nav>
-
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-muted"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          
+          {/* Empty div for spacing on mobile */}
+          <div className="md:hidden">
+            <div className="w-8"></div>
+          </div>
         </div>
       </div>
 
