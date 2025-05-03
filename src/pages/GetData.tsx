@@ -20,7 +20,7 @@ const GetData = () => {
     },
     {
       category: "European VCs",
-      price: 375,
+      price: 75,
       description: "Premium access to European venture capital firms",
       companyCount: 15000,
     },
