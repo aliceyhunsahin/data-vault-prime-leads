@@ -13,7 +13,7 @@ const GetData = () => {
   const pricingData = [
     {
       category: "European Investor Firms and Contacts",
-      price: 375, 
+      price: 250, 
       description: "Decision makers at top European VCs",
       contactCount: 50000,
       companyCount: 20000,
