@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -32,7 +33,7 @@ const GetData = () => {
     },
     {
       category: "Family Offices and Contacts",
-      price: 300,
+      price: 75,
       description: "Family offices across USA, EU, and India",
       contactCount: 500,
       companyCount: 1600,
