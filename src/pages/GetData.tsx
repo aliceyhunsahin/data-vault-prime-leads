@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,34 +12,31 @@ const GetData = () => {
   // Apply 75% discount to all prices (original * 0.25 = 375)
   const pricingData = [
     {
-      category: "European VC Firms",
-      price: 375, // Original: 1500 * 0.25 = 375
+      category: "European Investor Firms and Contacts",
+      price: 375, 
       description: "Decision makers at top European VCs",
-      contactCount: 4500,
+      contactCount: 50000,
+      companyCount: 20000,
     },
     {
-      category: "European Angel Investors",
-      price: 125, // Original: 500 * 0.25 = 125
+      category: "European VCs",
+      price: 375,
+      description: "Premium access to European venture capital firms",
+      companyCount: 15000,
+    },
+    {
+      category: "European Angel Investors and Contacts",
+      price: 125,
       description: "Active angel investors throughout Europe",
       contactCount: 2000,
+      emailAddresses: true,
     },
     {
-      category: "European Travel Executives",
-      price: 75, // Original: 300 * 0.25 = 75
-      description: "C-level and senior leadership in travel",
-      contactCount: 1500,
-    },
-    {
-      category: "Family Offices",
-      price: 300, // Original: 1200 * 0.25 = 300
+      category: "Family Offices and Contacts",
+      price: 300,
       description: "Family offices across USA, EU, and India",
-      contactCount: 3500,
-    },
-    {
-      category: "Top Travel Acquirers",
-      price: 75, // Original: 300 * 0.25 = 75
-      description: "Strategic buyers in the travel sector",
-      contactCount: 300,
+      contactCount: 50000,
+      companyCount: 20000,
     },
   ];
 
@@ -61,7 +59,7 @@ const GetData = () => {
     },
     {
       question: "Can I get a custom dataset?",
-      answer: "Yes! Contact us at info@deepoasisaI.com for custom data requirements and quotes.",
+      answer: "Yes! Contact us at info@deepoasisai.com for custom data requirements and quotes.",
     },
   ];
 
@@ -158,7 +156,7 @@ const GetData = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Send confirmation</h3>
                     <p className="text-muted-foreground">
-                      Email a screenshot of your transaction to <strong>info@deepoasisaI.com</strong> with the dataset name in the subject line.
+                      Email a screenshot of your transaction to <strong>info@deepoasisai.com</strong> with the dataset name in the subject line.
                     </p>
                   </div>
                 </div>
