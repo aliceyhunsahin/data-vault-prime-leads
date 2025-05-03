@@ -139,11 +139,15 @@ const GetData = () => {
                     <div className="space-y-3">
                       <div className="bg-gray-100 p-3 rounded-md">
                         <p className="text-sm font-medium mb-1">USDT (ERC-20):</p>
-                        <code className="text-sm break-all">0xYourWalletAddressHere</code>
+                        <code className="text-sm break-all">0x18db5991043d3e962e341afec0edc6a727d8f593</code>
                       </div>
                       <div className="bg-gray-100 p-3 rounded-md">
                         <p className="text-sm font-medium mb-1">USDT (TRC-20):</p>
-                        <code className="text-sm break-all">YourTRC20WalletAddress</code>
+                        <code className="text-sm break-all">TRX1ub4HZZ95vDcisL7kVT4Mhmj9F8TGLt</code>
+                      </div>
+                      <div className="bg-gray-100 p-3 rounded-md">
+                        <p className="text-sm font-medium mb-1">USDT (BEP-20):</p>
+                        <code className="text-sm break-all">0x18db5991043d3e962e341afec0edc6a727d8f593</code>
                       </div>
                     </div>
                   </div>
